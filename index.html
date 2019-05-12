@@ -13,9 +13,9 @@
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <meta name="author" content="John Doe">
+    <meta name="author" content="一路向东">
     <meta name="renderer" content="webkit">
-    <meta name="copyright" content="John Doe">
+    <meta name="copyright" content="一路向东">
     
     <meta name="keywords" content="hexo,hexo-theme,hexo-blog,iava,javascript">
     
@@ -359,6 +359,44 @@ height:50vh;
     
     
     <article class="index-post">
+        <a class="abstract-title" href="/doc/2019/05/12/关于-Djava-security-egd-file-dev-random/">
+            
+                <span>关于 -Djava.security.egd=file:/dev/random </span>
+        </a>
+        <div class="abstract-content">
+            在 Dockerfile 中，启动一个spring boot的jar包，常常会配置成
+ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"]
+这种形式。
+其中 -Djava.security.egd 这个选项是干什么用的呢？
+-Djava.security.egd-Djava.security.egd 选项，用来指明jvm的随机数熵池策略。这个选项在linux系统下，可以指定为
+-Djava.security.egd=file:/dev/random
+或者
+-Djava.securit...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/05/12</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class="abstract-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="java">java</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="random">random</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href="/doc/2019/05/11/hello-world/">
             
                 <span>Hello World</span>
@@ -562,9 +600,16 @@ More i...
     
     
     
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 1
+        Total : 2
         </div>
         <!-- search  -->
         
@@ -583,10 +628,28 @@ More i...
             <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href="/doc/2019/05/11/hello-world/">Hello World</a>
         </li>
     
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> 2019 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/12</span><a class="archive-post-title" href="/doc/2019/05/12/关于-Djava-security-egd-file-dev-random/">关于 -Djava.security.egd=file:/dev/random </a>
+        </li>
+    
     </ul></div>
   </div>
         <div class="sidebar-panel-tags">
     <div class="sidebar-tags-name">
+    
+        <span class="sidebar-tag-name" data-tags="java"><span class="iconfont-archer">&#xe606;</span>java</span>
+    
+        <span class="sidebar-tag-name" data-tags="random"><span class="iconfont-archer">&#xe606;</span>random</span>
     
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
@@ -621,6 +684,8 @@ jsonContent:
         <div class="sidebar-panel-categories">
     <div class="sidebar-categories-name">
     
+        <span class="sidebar-category-name" data-categories="java"><span class="iconfont-archer">&#xe60a;</span>java</span>
+    
     </div>
     <div class="iconfont-archer sidebar-categories-empty">&#xe678;</div>
     <div class="sidebar-categories-list"></div>
@@ -630,7 +695,7 @@ jsonContent:
     <script>
     var siteMeta = {
         root: "/doc/",
-        author: "John Doe"
+        author: "一路向东"
     }
 </script>
     <!-- CDN failover -->
