@@ -276,7 +276,7 @@ height:50vh;
                 
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">827</span>阅读时长: <span class="post-count reading-time">3 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">860</span>阅读时长: <span class="post-count reading-time">3 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
@@ -417,7 +417,8 @@ height:50vh;
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">-Djava.security.egd=file:/dev/./urandom</span><br></pre></td></tr></table></figure>
 <p>中间加了一个点。实际指向的目录是一样的。</p>
 <h1 id="随机数熵池策略"><a href="#随机数熵池策略" class="headerlink" title="随机数熵池策略"></a>随机数熵池策略</h1><p>java的随机数的质量，依赖于随机数种子。比如常用的<strong>Random</strong>类，其种子依赖于系统时间。如果在一个毫秒内生成了两个随机数，这两个随机数是相同的。这种随机数的质量是低的。</p>
-<p>在jdk中还提供了<strong>SecureRandom</strong>类这种加密 PRNG算法。该算法能够提供高质量的随机数。这个算法就跟上边提到的-Djava.security.egd这个选项有关。他的种子是由系统设备/dev/random或者/dev/urandom提供的。如果我们系统中用到了大量<strong>SecureRandom</strong>这个类进行随机数的生成，就需要注意一下-Djava.security.egd的选项了。</p>
+<p>在jdk中还提供了<strong>SecureRandom</strong>类这种加密 PRNG算法。该算法能够提供高质量的随机数。这个算法就跟上边提到的-Djava.security.egd这个选项有关。他的种子是由系统设备/dev/random或者/dev/urandom提供的。操作系统收集了一些随机事件，比如鼠标点击，键盘点击，cpu转速等等为<strong>SecureRandom</strong>作为种子。</p>
+<p>如果我们系统中用到了大量<strong>SecureRandom</strong>这个类进行随机数的生成，就需要注意一下-Djava.security.egd的选项了。</p>
 <p>file:/dev/random 和 file:/dev/urandom 是两个虚拟设备在linux下，一切都是文件。这两个文件是在磁盘上可以找到的。 </p>
 <h1 id="file-dev-random-和-file-dev-urandom-的差别"><a href="#file-dev-random-和-file-dev-urandom-的差别" class="headerlink" title="file:/dev/random 和  file:/dev/urandom 的差别"></a>file:/dev/random 和  file:/dev/urandom 的差别</h1><p> file:/dev/random是阻塞的，但是其生成的数据随机性更高。file:/dev/urandom是非阻塞的，随机性“有时”会比较低。有时是什么时候呢，就是在熵池都用完，但是新的“不确定因素的值”还没有收集上来的时候。此时，/dev/random会等待熵池信息收集，这样，阻塞就发生了。而/dev/urandom会重用用过的熵池中的信息，不会阻塞，但是会降低随机数质量。</p>
 <p>但是一般来说我们不会要求我们随机数的质量要那么的高，而且，有没有那么高的并发可以那么快的把熵池消耗完，也需要考虑；所以，大部分情况，使用非阻塞就可以了。</p>
@@ -433,7 +434,7 @@ height:50vh;
             <p>原文作者：<a href="https://soonboylena.github.io">一路向东</a>
             </p><p>原文链接：<a href="https://soonboylena.github.io/2019/05/12/关于-Djava-security-egd-file-dev-random/">https://soonboylena.github.io/2019/05/12/关于-Djava-security-egd-file-dev-random/</a>
             </p><p>发表日期：<a href="https://soonboylena.github.io/2019/05/12/关于-Djava-security-egd-file-dev-random/">May 12th 2019, 8:59:07 am</a>
-            </p><p>更新日期：<a href="https://soonboylena.github.io/2019/05/12/关于-Djava-security-egd-file-dev-random/">May 13th 2019, 9:42:48 am</a>
+            </p><p>更新日期：<a href="https://soonboylena.github.io/2019/05/12/关于-Djava-security-egd-file-dev-random/">May 13th 2019, 9:46:21 am</a>
             </p><p>版权声明：以上文章内容都是基于个人理解，有错误的地方请多指正。采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
     
