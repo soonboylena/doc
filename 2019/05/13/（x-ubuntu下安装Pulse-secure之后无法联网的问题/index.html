@@ -22,7 +22,7 @@
     <meta name="description" content>
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>技术博客</title>
+    <title>（x)ubuntu下安装Pulse secure之后无法联网的问题 · 技术博客</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -203,12 +203,23 @@
 </head>
 
     
+        <body class="post-body">
+    
     
 <header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/doc/">老年人的备忘录</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">（x)ubuntu下安装Pulse secure之后无法联网的问题</a>
+            </div>
+    </div>
     
     <a class="home-link" href="/doc/">老年人的备忘录</a>
 </header>
@@ -220,24 +231,78 @@
 
 
 
+
+height:50vh;
 ">
     
     <!-- 主页  -->
+    
+    
+    <!-- 404页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/doc/)"></div>
+    <div class="site-intro-img" style="background-image: url(/doc/intro/post-bg.jpg)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
+            
+            （x)ubuntu下安装Pulse secure之后无法联网的问题
+            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
+            
+            <!-- 404 -->
+            
         </p>
         <!-- 文章页meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                    <div class="post-intro-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="vpn">vpn</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="linux">linux</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="ubuntu">ubuntu</a>
+    
+</div>
+                
+                
+                    <div class="post-intro-read">
+                        <span>字数统计: <span class="post-count word-count">260</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
+                    </div>
+                
+                <div class="post-intro-meta">
+                    <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                    <span class="post-intro-time">2019/05/13</span>
+                    
+                    <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                        <span class="iconfont-archer">&#xe602;</span>
+                        <span id="busuanzi_value_page_pv"></span>
+                    </span>
+                    
+                    <span class="shareWrapper">
+                        <span class="iconfont-archer shareIcon">&#xe71d;</span>
+                        <span class="shareText">Share</span>
+                        <ul class="shareList">
+                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
         
     </div>
 </div>
@@ -338,87 +403,54 @@
 </script>        
         <img class="loading" src="/doc/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
         <div class="container container-unloaded">
-            <main class="main index-page">
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/doc/2019/05/13/（x-ubuntu下安装Pulse-secure之后无法联网的问题/">
-            
-                <span>（x)ubuntu下安装Pulse secure之后无法联网的问题</span>
-        </a>
-        <div class="abstract-content">
-            由于工作需要，我在电脑上（我使用的是xubuntu系统）安装了Pulse secure这个vpn软件。在linux的安装方法，请点击这里 
-好不容易安装成功并且连上了，但是问题发生了。第二天，电脑重启后，所有的网络都无法正常工作了（没有开启Pulse Secure）。网络连接都正常，但是所有的地址都ping不通。页面也无法打开。
-费了一番周折，终于找到了问题的所在。打开 /etc/resolv.conf文件：sudo vim /etc/resolv.conf
-发现有如下内容：
-将其内容完全删除，然后加上一行 ：nameserver 127.0.1.1具体 127.0.1.1 的含义，请参...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/05/13</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="vpn">vpn</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="linux">linux</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="ubuntu">ubuntu</a>
-    
-</div>
-            
-        </div>
+            <main class="main post-page">
+    <article class="article-entry">
+        <p>由于工作需要，我在电脑上（我使用的是xubuntu系统）安装了Pulse secure这个vpn软件。<br>在linux的安装方法，请点击<a href="https://cis.technion.ac.il/en/central-services/communication/install-pulse-client-linux/" target="_blank" rel="noopener">这里 </a></p>
+<p>好不容易安装成功并且连上了，但是问题发生了。第二天，电脑重启后，所有的网络都无法正常工作了（没有开启Pulse Secure）。网络连接都正常，但是所有的地址都ping不通。页面也无法打开。</p>
+<p>费了一番周折，终于找到了问题的所在。<br>打开 <code>/etc/resolv.conf</code>文件：<br>sudo vim /etc/resolv.conf</p>
+<p>发现有如下内容：<br><img src="13843745-22cf2b95a5ba94a2.png" alt="flameshot-2018-09-06 17:29:19.png"></p>
+<p>将其内容完全删除，然后加上一行 ：<br><code>nameserver 127.0.1.1</code><br>具体 127.0.1.1 的含义，请参见<a href="https://segmentfault.com/q/1010000002443769" target="_blank" rel="noopener">这里</a><br>然后执行命令,重启网络服务：<br>sudo service network-manager restart</p>
+<p>具体原因不太清楚。只是知道 /etc/resolv.conf 这个文件是跟DNS有关的。由于原来的那三行配置，导致了所有的DNS查询都失败，所有的通过DNS访问的请求也都失效了。</p>
+
     </article>
+    <!-- license  -->
     
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/doc/2019/05/12/关于-Djava-security-egd-file-dev-random/">
-            
-                <span>关于 -Djava.security.egd=file:/dev/random </span>
-        </a>
-        <div class="abstract-content">
-            在 Dockerfile 中，启动一个spring boot的jar包，常常会配置成
-ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"]
-这种形式。
-其中 -Djava.security.egd 这个选项是干什么用的呢？
--Djava.security.egd-Djava.security.egd 选项，用来指明jvm的随机数熵池策略。这个选项在linux系统下，可以指定为
--Djava.security.egd=file:/dev/random
-或者
--Djava.securit...
+        <div class="license-wrapper">
+            <p>原文作者：<a href="https://soonboylena.github.io">一路向东</a>
+            </p><p>原文链接：<a href="https://soonboylena.github.io/2019/05/13/（x-ubuntu下安装Pulse-secure之后无法联网的问题/">https://soonboylena.github.io/2019/05/13/（x-ubuntu下安装Pulse-secure之后无法联网的问题/</a>
+            </p><p>发表日期：<a href="https://soonboylena.github.io/2019/05/13/（x-ubuntu下安装Pulse-secure之后无法联网的问题/">May 13th 2019, 9:54:16 am</a>
+            </p><p>更新日期：<a href="https://soonboylena.github.io/2019/05/13/（x-ubuntu下安装Pulse-secure之后无法联网的问题/">May 13th 2019, 10:14:51 am</a>
+            </p><p>版权声明：以上文章内容都是基于个人理解，有错误的地方请多指正。采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/05/12</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="java">java</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="jvm">jvm</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="random">random</a>
-    
-</div>
-            
-        </div>
-    </article>
     
     <!-- paginator  -->
+    <ul class="post-paginator">
+        <li class="next">
+            
+        </li>
+        <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href="/doc/2019/05/12/关于-Djava-security-egd-file-dev-random/" title="关于 -Djava.security.egd=file:/dev/random ">
+                    <div class="prevTitle">关于 -Djava.security.egd=file:/dev/random </div>
+                </a>
+            
+        </li>
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+<!-- City版安装代码已完成 -->
     
+    
+    <!-- partial('_partial/comment/changyan') -->
+    <!--PC版-->
+
+
+    
+    
+
+    <!-- 评论 -->
 </main>
             <!-- profile -->
             
@@ -501,6 +533,24 @@ ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"]
 </footer>
     </div>
     <!-- toc -->
+    
+    <div class="toc-wrapper" style=
+    
+
+
+
+
+
+
+
+top:50vh;
+
+    >
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        
+    </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
     <div class="sidebar sidebar-hide">
@@ -642,6 +692,8 @@ jsonContent:
     
     </div>
     <!-- async load share.js -->
+    
+        <script src="/doc/scripts/share.js" async></script>    
      
     </body>
 </html>

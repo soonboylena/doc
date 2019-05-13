@@ -377,46 +377,6 @@
         </div>
     </article>
     
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/doc/2019/05/12/关于-Djava-security-egd-file-dev-random/">
-            
-                <span>关于 -Djava.security.egd=file:/dev/random </span>
-        </a>
-        <div class="abstract-content">
-            在 Dockerfile 中，启动一个spring boot的jar包，常常会配置成
-ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"]
-这种形式。
-其中 -Djava.security.egd 这个选项是干什么用的呢？
--Djava.security.egd-Djava.security.egd 选项，用来指明jvm的随机数熵池策略。这个选项在linux系统下，可以指定为
--Djava.security.egd=file:/dev/random
-或者
--Djava.securit...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/05/12</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="java">java</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="jvm">jvm</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="random">random</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
     <!-- paginator  -->
     
 </main>

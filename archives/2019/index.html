@@ -346,6 +346,43 @@
     
     
     <article class="index-post">
+        <a class="abstract-title" href="/doc/2019/05/13/（x-ubuntu下安装Pulse-secure之后无法联网的问题/">
+            
+                <span>（x)ubuntu下安装Pulse secure之后无法联网的问题</span>
+        </a>
+        <div class="abstract-content">
+            由于工作需要，我在电脑上（我使用的是xubuntu系统）安装了Pulse secure这个vpn软件。在linux的安装方法，请点击这里 
+好不容易安装成功并且连上了，但是问题发生了。第二天，电脑重启后，所有的网络都无法正常工作了（没有开启Pulse Secure）。网络连接都正常，但是所有的地址都ping不通。页面也无法打开。
+费了一番周折，终于找到了问题的所在。打开 /etc/resolv.conf文件：sudo vim /etc/resolv.conf
+发现有如下内容：
+将其内容完全删除，然后加上一行 ：nameserver 127.0.1.1具体 127.0.1.1 的含义，请参...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/05/13</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class="abstract-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="vpn">vpn</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="linux">linux</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="ubuntu">ubuntu</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href="/doc/2019/05/12/关于-Djava-security-egd-file-dev-random/">
             
                 <span>关于 -Djava.security.egd=file:/dev/random </span>
@@ -486,9 +523,16 @@ ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"]
     
     
     
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 1
+        Total : 2
         </div>
         <!-- search  -->
         
@@ -501,6 +545,11 @@ ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"]
     
     <div class="archive-year"> 2019 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/13</span><a class="archive-post-title" href="/doc/2019/05/13/（x-ubuntu下安装Pulse-secure之后无法联网的问题/">（x)ubuntu下安装Pulse secure之后无法联网的问题</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -517,6 +566,12 @@ ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"]
         <span class="sidebar-tag-name" data-tags="jvm"><span class="iconfont-archer">&#xe606;</span>jvm</span>
     
         <span class="sidebar-tag-name" data-tags="random"><span class="iconfont-archer">&#xe606;</span>random</span>
+    
+        <span class="sidebar-tag-name" data-tags="vpn"><span class="iconfont-archer">&#xe606;</span>vpn</span>
+    
+        <span class="sidebar-tag-name" data-tags="linux"><span class="iconfont-archer">&#xe606;</span>linux</span>
+    
+        <span class="sidebar-tag-name" data-tags="ubuntu"><span class="iconfont-archer">&#xe606;</span>ubuntu</span>
     
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
@@ -552,6 +607,8 @@ jsonContent:
     <div class="sidebar-categories-name">
     
         <span class="sidebar-category-name" data-categories="java"><span class="iconfont-archer">&#xe60a;</span>java</span>
+    
+        <span class="sidebar-category-name" data-categories="linux"><span class="iconfont-archer">&#xe60a;</span>linux</span>
     
     </div>
     <div class="iconfont-archer sidebar-categories-empty">&#xe678;</div>
