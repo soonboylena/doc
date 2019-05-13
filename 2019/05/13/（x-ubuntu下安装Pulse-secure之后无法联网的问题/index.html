@@ -408,7 +408,8 @@ height:50vh;
         <p>由于工作需要，我在电脑上（我使用的是xubuntu系统）安装了Pulse secure这个vpn软件。<br>在linux的安装方法，请点击<a href="https://cis.technion.ac.il/en/central-services/communication/install-pulse-client-linux/" target="_blank" rel="noopener">这里 </a></p>
 <p>好不容易安装成功并且连上了，但是问题发生了。第二天，电脑重启后，所有的网络都无法正常工作了（没有开启Pulse Secure）。网络连接都正常，但是所有的地址都ping不通。页面也无法打开。</p>
 <p>费了一番周折，终于找到了问题的所在。<br>打开 <code>/etc/resolv.conf</code>文件：<br>sudo vim /etc/resolv.conf</p>
-<p>发现有如下内容：<br><img src="13843745-22cf2b95a5ba94a2.png" alt="flameshot-2018-09-06 17:29:19.png"></p>
+<p>发现有如下内容：</p>
+<p><img src="13843745-22cf2b95a5ba94a2.png" alt="13843745-22cf2b95a5ba94a2.png"></p>
 <p>将其内容完全删除，然后加上一行 ：<br><code>nameserver 127.0.1.1</code><br>具体 127.0.1.1 的含义，请参见<a href="https://segmentfault.com/q/1010000002443769" target="_blank" rel="noopener">这里</a><br>然后执行命令,重启网络服务：<br>sudo service network-manager restart</p>
 <p>具体原因不太清楚。只是知道 /etc/resolv.conf 这个文件是跟DNS有关的。由于原来的那三行配置，导致了所有的DNS查询都失败，所有的通过DNS访问的请求也都失效了。</p>
 
@@ -419,7 +420,7 @@ height:50vh;
             <p>原文作者：<a href="https://soonboylena.github.io">一路向东</a>
             </p><p>原文链接：<a href="https://soonboylena.github.io/2019/05/13/（x-ubuntu下安装Pulse-secure之后无法联网的问题/">https://soonboylena.github.io/2019/05/13/（x-ubuntu下安装Pulse-secure之后无法联网的问题/</a>
             </p><p>发表日期：<a href="https://soonboylena.github.io/2019/05/13/（x-ubuntu下安装Pulse-secure之后无法联网的问题/">May 13th 2019, 9:54:16 am</a>
-            </p><p>更新日期：<a href="https://soonboylena.github.io/2019/05/13/（x-ubuntu下安装Pulse-secure之后无法联网的问题/">May 13th 2019, 10:14:51 am</a>
+            </p><p>更新日期：<a href="https://soonboylena.github.io/2019/05/13/（x-ubuntu下安装Pulse-secure之后无法联网的问题/">May 13th 2019, 4:43:00 pm</a>
             </p><p>版权声明：以上文章内容都是基于个人理解，有错误的地方请多指正。采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
     
