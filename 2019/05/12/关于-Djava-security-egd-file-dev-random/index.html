@@ -406,7 +406,7 @@ height:50vh;
             <main class="main post-page">
     <article class="article-entry">
         <p>在 Dockerfile 中，启动一个spring boot的jar包，常常会配置成</p>
-<figure class="highlight dockerfile"><table><tr><td class="code"><pre><span class="line"><span class="keyword">ENTRYPOINT</span> ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"]</span><br></pre></td></tr></table></figure>
+<figure class="highlight dockerfile"><table><tr><td class="code"><pre><span class="line"><span class="keyword">ENTRYPOINT</span><span class="bash"> [<span class="string">"java"</span>,<span class="string">"-Djava.security.egd=file:/dev/./urandom"</span>,<span class="string">"-jar"</span>,<span class="string">"/app.jar"</span>]</span></span><br></pre></td></tr></table></figure>
 <p>这种形式。</p>
 <p>其中 -Djava.security.egd 这个选项是干什么用的呢？</p>
 <h1 id="Djava-security-egd"><a href="#Djava-security-egd" class="headerlink" title="-Djava.security.egd"></a>-Djava.security.egd</h1><p>-Djava.security.egd 选项，用来指明jvm的随机数熵池策略。这个选项在linux系统下，可以指定为</p>
@@ -595,9 +595,20 @@ top:50vh;
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 2
+        Total : 3
         </div>
         <!-- search  -->
         
@@ -610,6 +621,11 @@ top:50vh;
     
     <div class="archive-year"> 2019 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/14</span><a class="archive-post-title" href="/doc/2019/05/14/A-run-or-raise-application-一个linux下窗口切换小程序/">A run-or-raise application 一个linux下窗口切换小程序</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -626,6 +642,12 @@ top:50vh;
         <div class="sidebar-panel-tags">
     <div class="sidebar-tags-name">
     
+        <span class="sidebar-tag-name" data-tags="linux"><span class="iconfont-archer">&#xe606;</span>linux</span>
+    
+        <span class="sidebar-tag-name" data-tags="xfce"><span class="iconfont-archer">&#xe606;</span>xfce</span>
+    
+        <span class="sidebar-tag-name" data-tags="productive"><span class="iconfont-archer">&#xe606;</span>productive</span>
+    
         <span class="sidebar-tag-name" data-tags="java"><span class="iconfont-archer">&#xe606;</span>java</span>
     
         <span class="sidebar-tag-name" data-tags="jvm"><span class="iconfont-archer">&#xe606;</span>jvm</span>
@@ -633,8 +655,6 @@ top:50vh;
         <span class="sidebar-tag-name" data-tags="random"><span class="iconfont-archer">&#xe606;</span>random</span>
     
         <span class="sidebar-tag-name" data-tags="vpn"><span class="iconfont-archer">&#xe606;</span>vpn</span>
-    
-        <span class="sidebar-tag-name" data-tags="linux"><span class="iconfont-archer">&#xe606;</span>linux</span>
     
         <span class="sidebar-tag-name" data-tags="ubuntu"><span class="iconfont-archer">&#xe606;</span>ubuntu</span>
     
@@ -671,9 +691,11 @@ jsonContent:
         <div class="sidebar-panel-categories">
     <div class="sidebar-categories-name">
     
+        <span class="sidebar-category-name" data-categories="linux"><span class="iconfont-archer">&#xe60a;</span>linux</span>
+    
         <span class="sidebar-category-name" data-categories="java"><span class="iconfont-archer">&#xe60a;</span>java</span>
     
-        <span class="sidebar-category-name" data-categories="linux"><span class="iconfont-archer">&#xe60a;</span>linux</span>
+        <span class="sidebar-category-name" data-categories="linux/tool"><span class="iconfont-archer">&#xe60a;</span>linux/tool</span>
     
     </div>
     <div class="iconfont-archer sidebar-categories-empty">&#xe678;</div>

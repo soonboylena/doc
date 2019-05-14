@@ -22,7 +22,7 @@
     <meta name="description" content>
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>技术博客</title>
+    <title>A run-or-raise application 一个linux下窗口切换小程序 · 技术博客</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -77,6 +77,8 @@
 
     <link rel="preload" href="/doc/css/style.css?v=20180824" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="stylesheet" href="/doc/css/mobile.css?v=20180824" media="(max-width: 980px)">
+    
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     
     <!-- /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
 /* This file is meant as a standalone workflow for
@@ -201,14 +203,23 @@
 </head>
 
     
-        <body class="home-body">
+        <body class="post-body">
     
     
-<header class="header index-header">
+<header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/doc/">老年人的备忘录</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">A run-or-raise application 一个linux下窗口切换小程序</a>
+            </div>
+    </div>
     
     <a class="home-link" href="/doc/">老年人的备忘录</a>
 </header>
@@ -227,17 +238,17 @@ height:50vh;
     <!-- 主页  -->
     
     
-    <!-- 文章页  -->
+    <!-- 404页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/doc/intro/index-bg.jpg)"></div>
+    <div class="site-intro-img" style="background-image: url(/doc/intro/post-bg.jpg)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            老年人的备忘录
-            <!-- 文章页  -->
+            A run-or-raise application 一个linux下窗口切换小程序
+            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
@@ -245,12 +256,53 @@ height:50vh;
             <!-- 主页副标题  -->
             
             
-                之前记的慢，现在忘的快
-            
-            <!-- 文章页  -->
+            <!-- 404 -->
             
         </p>
         <!-- 文章页meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                    <div class="post-intro-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="linux">linux</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="xfce">xfce</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="productive">productive</a>
+    
+</div>
+                
+                
+                    <div class="post-intro-read">
+                        <span>字数统计: <span class="post-count word-count">416</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
+                    </div>
+                
+                <div class="post-intro-meta">
+                    <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                    <span class="post-intro-time">2019/05/14</span>
+                    
+                    <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                        <span class="iconfont-archer">&#xe602;</span>
+                        <span id="busuanzi_value_page_pv"></span>
+                    </span>
+                    
+                    <span class="shareWrapper">
+                        <span class="iconfont-archer shareIcon">&#xe71d;</span>
+                        <span class="shareText">Share</span>
+                        <ul class="shareList">
+                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
         
     </div>
 </div>
@@ -351,204 +403,80 @@ height:50vh;
 </script>        
         <img class="loading" src="/doc/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
         <div class="container container-unloaded">
-            <main class="main index-page">
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/doc/2019/05/14/A-run-or-raise-application-一个linux下窗口切换小程序/">
-            
-                <span>A run-or-raise application 一个linux下窗口切换小程序</span>
-        </a>
-        <div class="abstract-content">
-            平时使用的系统的manjaro，桌面环境是xfce。打开多个程序时，通过 alt-tab来回切换非常不便，又懒的去熟悉i3wm等桌面，找来找去找到一个小巧的工具，用来切换窗口，方便了很多。
-github上地址：
+            <main class="main post-page">
+    <article class="article-entry">
+        <p>平时使用的系统的manjaro，桌面环境是xfce。打开多个程序时，通过 alt-tab来回切换非常不便，又懒的去熟悉i3wm等桌面，找来找去找到一个小巧的工具，用来切换窗口，方便了很多。</p>
+<p>github上地址：</p>
+<blockquote>
+<p><a href="https://github.com/mkropat/jumpapp" target="_blank" rel="noopener">https://github.com/mkropat/jumpapp</a></p>
+</blockquote>
+<h2 id="安装方法"><a href="#安装方法" class="headerlink" title="安装方法"></a>安装方法</h2><h3 id="Ubuntu-Debian-and-Friends"><a href="#Ubuntu-Debian-and-Friends" class="headerlink" title="Ubuntu, Debian and Friends"></a>Ubuntu, Debian and Friends</h3><figure class="highlight vim"><table><tr><td class="code"><pre><span class="line">sudo apt-<span class="built_in">get</span> install build-essential debhelper pandoc shunit2</span><br><span class="line">git clone http<span class="variable">s:</span>//github.<span class="keyword">com</span>/mkropat/jumpapp.git</span><br><span class="line"><span class="keyword">cd</span> jumpapp</span><br><span class="line"><span class="keyword">make</span> <span class="keyword">deb</span></span><br><span class="line">sudo dpkg -i jumpapp*<span class="keyword">all</span>.<span class="keyword">deb</span></span><br><span class="line">sudo apt-<span class="built_in">get</span> install -<span class="keyword">f</span>	# <span class="keyword">if</span> there were missing dependencies</span><br></pre></td></tr></table></figure>
+<h3 id="Fedora-and-Friends"><a href="#Fedora-and-Friends" class="headerlink" title="Fedora and Friends"></a>Fedora and Friends</h3><figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line">git clone https:<span class="comment">//github.com/mkropat/jumpapp.git</span></span><br><span class="line">cd jumpapp</span><br><span class="line">make rpm</span><br><span class="line">sudo yum localinstall jumpapp*<span class="selector-class">.noarch</span><span class="selector-class">.rpm</span></span><br></pre></td></tr></table></figure>
+<h3 id="Arch-linux-and-Friends"><a href="#Arch-linux-and-Friends" class="headerlink" title="Arch linux and Friends"></a>Arch linux and Friends</h3><figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="attribute">yaourt</span> -S aur/jumpapp-git</span><br></pre></td></tr></table></figure>
+<h3 id="From-Source"><a href="#From-Source" class="headerlink" title="From Source"></a>From Source</h3><figure class="highlight vim"><table><tr><td class="code"><pre><span class="line">git clone http<span class="variable">s:</span>//github.<span class="keyword">com</span>/mkropat/jumpapp.git</span><br><span class="line"><span class="keyword">cd</span> jumpapp</span><br><span class="line"><span class="keyword">make</span> &amp;&amp; sudo <span class="keyword">make</span> install</span><br></pre></td></tr></table></figure>
+<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><p>jumpapp &lt;应用名&gt; </p>
+<p>如果对应的应用已经打开了，直接把应用激活；如果没有打开，那就帮你新开一个。</p>
+<p><strong>然后可以把这个命令绑定到键盘上就可以了</strong> 绑定键盘快捷键就不细说了，各个桌面系统都不一样</p>
+<p>这里说一下 应用程序的名怎么找</p>
+<ol>
+<li>先打开app名</li>
+</ol>
+<p>在命令行输入</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">xprop | grep WM_CLASS</span><br></pre></td></tr></table></figure>
+<p>然后点击你要找那个应用，终端里边就会出现了。</p>
+<p><img src="1557803554207.png" alt="1557803554207"></p>
+<p>一般来说，这两个名字都是可以的。</p>
+<p>最好是自己再试一下。</p>
+<p>还有一种情况，比如chrome，通过这种方式找的应用名， 可以激活，但是不可以帮你自动打开。可以采用以下方法：</p>
+<p><img src="1557804236608.png" alt="1557804236608"></p>
+<ol>
+<li>WM_CLASS 是google-chrome</li>
+<li>如果chrome现在是开启的，能够激活，没有问题</li>
+<li>如果现在chrome是关闭的，就会出错</li>
+<li>google-chrome-stable是chrome的启动命令，加上参数 -c，后边跟WM_CLASS ,然后指定启动命令，完美 😎️</li>
+</ol>
 
-https://github.com/mkropat/jumpapp
-
-安装方法Ubuntu, Debian and Friendssudo apt-get install build-essential debhelper pandoc shunit2git clone https://github.com/mkropat/jumpapp.gitcd jumpappmake ...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/05/14</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="linux">linux</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="xfce">xfce</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="productive">productive</a>
-    
-</div>
-            
-        </div>
     </article>
+    <!-- license  -->
     
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/doc/2019/05/13/（x-ubuntu下安装Pulse-secure之后无法联网的问题/">
-            
-                <span>（x)ubuntu下安装Pulse secure之后无法联网的问题</span>
-        </a>
-        <div class="abstract-content">
-            由于工作需要，我在电脑上（我使用的是xubuntu系统）安装了Pulse secure这个vpn软件。在linux的安装方法，请点击这里 
-好不容易安装成功并且连上了，但是问题发生了。第二天，电脑重启后，所有的网络都无法正常工作了（没有开启Pulse Secure）。网络连接都正常，但是所有的地址都ping不通。页面也无法打开。
-费了一番周折，终于找到了问题的所在。打开 /etc/resolv.conf文件：sudo vim /etc/resolv.conf
-发现有如下内容：
-
-将其内容完全删除，然后加上一行 ：nameserver 127.0.1.1具体 127.0.1.1 的含义，请...
+        <div class="license-wrapper">
+            <p>原文作者：<a href="https://soonboylena.github.io">一路向东</a>
+            </p><p>原文链接：<a href="https://soonboylena.github.io/2019/05/14/A-run-or-raise-application-一个linux下窗口切换小程序/">https://soonboylena.github.io/2019/05/14/A-run-or-raise-application-一个linux下窗口切换小程序/</a>
+            </p><p>发表日期：<a href="https://soonboylena.github.io/2019/05/14/A-run-or-raise-application-一个linux下窗口切换小程序/">May 14th 2019, 10:55:57 am</a>
+            </p><p>更新日期：<a href="https://soonboylena.github.io/2019/05/14/A-run-or-raise-application-一个linux下窗口切换小程序/">May 14th 2019, 11:29:42 am</a>
+            </p><p>版权声明：以上文章内容都是基于个人理解，有错误的地方请多指正。采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/05/13</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="linux">linux</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="vpn">vpn</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="ubuntu">ubuntu</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/doc/2019/05/12/关于-Djava-security-egd-file-dev-random/">
-            
-                <span>关于 -Djava.security.egd=file:/dev/random </span>
-        </a>
-        <div class="abstract-content">
-            在 Dockerfile 中，启动一个spring boot的jar包，常常会配置成
-ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"]
-这种形式。
-其中 -Djava.security.egd 这个选项是干什么用的呢？
--Djava.security.egd-Djava.security.egd 选项，用来指明jvm的随机数熵池策略。这个选项在linux系统下，可以指定为
--Djava.security.egd=file:/dev/random
-或者
--Djava.securit...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/05/12</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="java">java</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="jvm">jvm</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="random">random</a>
-    
-</div>
-            
-        </div>
-    </article>
     
     <!-- paginator  -->
-    
-</main>
-            <!-- profile -->
+    <ul class="post-paginator">
+        <li class="next">
             
-            <div class="profile">
-    <img class="profile-avatar" alt="avatar" src="/doc/avatar/雪降之风景.jpg">
-    <div class="profile-name">一路向东</div>
-    
-    <div class="profile-signature">
-        人生不如意十之八九，剩下一二也不咋地
-    </div>
-    
-    
-    <div class="profile-social">
-        
-    
-        
+        </li>
+        <li class="previous">
             
-                <a href="mailto:soonboylena@gmail.com" class="iconfont-archer email" title="email"></a>
+                <div class="prevSlogan">Previous Post</div>
+                <a href="/doc/2019/05/13/（x-ubuntu下安装Pulse-secure之后无法联网的问题/" title="（x)ubuntu下安装Pulse secure之后无法联网的问题">
+                    <div class="prevTitle">（x)ubuntu下安装Pulse secure之后无法联网的问题</div>
+                </a>
             
-        
+        </li>
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+<!-- City版安装代码已完成 -->
     
-        
-            
-                <a href="//github.com/soonboylena" class="iconfont-archer github" target="_blank" title="github"></a>
-            
-        
     
-        
-            
-                <span class="iconfont-archer wechat" title="wechat">
-                  
-                  <img class="profile-qr" src="/doc/assets/1281641193.jpg">
-                </span>
-            
-        
+    <!-- partial('_partial/comment/changyan') -->
+    <!--PC版-->
+
+
     
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
     
 
-    </div>
-    
-    
-    
-        <div class="about-me">
-            <a href="/doc/about">ABOUT ME</a>
-        </div>
-    
-</div>
+    <!-- 评论 -->
+</main>
+            <!-- profile -->
             
         </div>
         <footer class="footer footer-unloaded">
@@ -629,6 +557,24 @@ ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"]
 </footer>
     </div>
     <!-- toc -->
+    
+    <div class="toc-wrapper" style=
+    
+
+
+
+
+
+
+
+top:50vh;
+
+    >
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#安装方法"><span class="toc-number">1.</span> <span class="toc-text">安装方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Ubuntu-Debian-and-Friends"><span class="toc-number">1.1.</span> <span class="toc-text">Ubuntu, Debian and Friends</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Fedora-and-Friends"><span class="toc-number">1.2.</span> <span class="toc-text">Fedora and Friends</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Arch-linux-and-Friends"><span class="toc-number">1.3.</span> <span class="toc-text">Arch linux and Friends</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#From-Source"><span class="toc-number">1.4.</span> <span class="toc-text">From Source</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用方法"><span class="toc-number">2.</span> <span class="toc-text">使用方法</span></a></li></ol>
+    </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
     <div class="sidebar sidebar-hide">
@@ -792,6 +738,8 @@ jsonContent:
     
     </div>
     <!-- async load share.js -->
+    
+        <script src="/doc/scripts/share.js" async></script>    
      
     </body>
 </html>
