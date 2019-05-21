@@ -441,12 +441,11 @@ height:50vh;
 <blockquote>
 <p>(SYN) seq=1     —我想跟你聊（SYN），这是第一封信</p>
 </blockquote>
-<!--实际上seq出于安全的考虑，是一个随机数，这里为了看的清楚，设为1-->
+<p><u>实际上seq出于安全的考虑，是一个随机数，这里为了看的清楚，设为1</u></p>
 <p>杨花的回信：</p>
 <blockquote>
 <p>(SYN，ACK)  Acknum=2, seq=101   — 收到（ACK），我也想跟你聊（SYN）</p>
 </blockquote>
-<!--Acknum也不一定是seq+1.一会儿会说这个例子-->
 <p>二柱收到后，知道杨花已经收到了，接下来发送：</p>
 <blockquote>
 <p>(ACK)  Acknum=102     — 这是你送的101信息的确认，可以开始聊了</p>
@@ -455,7 +454,7 @@ height:50vh;
 <blockquote>
 <p>seq=2, Acknum=102    — 正式传递数据</p>
 </blockquote>
-<p>每次二柱等到确认后，就会给杨花发下一封信。两人终于能愉快的通信了。。。</p>
+<p>每次二柱等到确认后，就会给杨花发下一封信。如果迟迟没有等到，就再发一次。两人终于能愉快的通信了。。。</p>
 <hr>
 <p>二柱跟杨花最后有没有最终走到一起呢…且听下回分解</p>
 <p>（今天先编到这里吧，实在编不下去了。说明一下，实际中TCP不是采用这种一问一答这种方式通信的。改天有时间再说吧）</p>
@@ -467,7 +466,7 @@ height:50vh;
             <p>原文作者：<a href="https://soonboylena.github.io">一路向东</a>
             </p><p>原文链接：<a href="https://soonboylena.github.io/2019/05/21/TCP协议是怎么回事/">https://soonboylena.github.io/2019/05/21/TCP协议是怎么回事/</a>
             </p><p>发表日期：<a href="https://soonboylena.github.io/2019/05/21/TCP协议是怎么回事/">May 21st 2019, 1:09:37 pm</a>
-            </p><p>更新日期：<a href="https://soonboylena.github.io/2019/05/21/TCP协议是怎么回事/">May 21st 2019, 6:03:46 pm</a>
+            </p><p>更新日期：<a href="https://soonboylena.github.io/2019/05/21/TCP协议是怎么回事/">May 21st 2019, 6:06:08 pm</a>
             </p><p>版权声明：以上文章内容都是基于个人理解，有错误的地方请多指正。采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
     
